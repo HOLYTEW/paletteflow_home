@@ -1,0 +1,225 @@
+  .first {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100vh;
+    background-color: white; /* พื้นหลัง */
+    border: 15px solid white;
+    z-index: 999; /* อยู่เหนือ background */
+    /* animation: loading-expand 2s ease-in-out forwards; */
+    overflow: hidden;
+  }
+  
+  @keyframes bg {
+    0% {
+      margin: auto;
+      width: 70%;
+      height: 80%;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    50% {
+      margin: auto;
+      width: 100%;
+      top: 5%;
+    }
+    100% {
+      width: 100%;
+      height: 100vh;
+      margin: auto;
+      top: 0%;
+      left: 0%;
+      transform: none;
+    }
+  }
+  
+  /* Background animations */
+  .background {
+    position: fixed; /* ติดกับจอ */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -10; /* อยู่ด้านล่างสุด */
+    border-radius: 35px; /* เต็มจอ */
+    background-color: white;
+    /* animation: bg 2s ease-in-out forwards; */
+  }  
+  
+  .bar1 {
+    position: absolute;
+    width: 200%;
+    height: 35%;
+    background: linear-gradient(90deg, 
+    #605678 0%, #605678 5%, /*5*/
+    #8ABFA3 5%, #8ABFA3 20%, /*15*/
+    #FFBF61 20%,#FFBF61 40%, /*20*/
+    #FFE6A5 40%,#FFE6A5 45%, /*5*/
+    #257180 45%,#257180 60%, /*15*/
+    #F2E5BF 60%,#F2E5BF 65%, /*5*/
+    #9ABF80 65%,#9ABF80 70%, /*5*/
+    #FD8B51 70%,#FD8B51 85%, /*15*/
+    #CB6040 85%,#CB6040 100% );  /*15*/ 
+    filter: blur(100px); /* ทำสีให้ฟุ้ง */
+    animation: move-right 6s ease-in-out infinite; /* เลื่อนไปทางขวา */
+  }
+  
+  .bar2 {
+    position: absolute;
+    width: 200%;
+    height: 35%;
+    background: linear-gradient(90deg, 
+    #605678 0%, #605678 5%, /*5*/
+    #8ABFA3 5%, #8ABFA3 20%, /*15*/
+    #FFBF61 20%,#FFBF61 40%, /*20*/
+    #FFE6A5 40%,#FFE6A5 45%, /*5*/
+    #257180 45%,#257180 60%, /*15*/
+    #F2E5BF 60%,#F2E5BF 65%, /*5*/
+    #9ABF80 65%,#9ABF80 70%, /*5*/
+    #FD8B51 70%,#FD8B51 85%, /*15*/
+    #CB6040 85%,#CB6040 100% );  /*15*/ 
+    filter: blur(100px); /* ทำสีให้ฟุ้ง */
+    animation: move-left 6s ease-in-out infinite; /* เลื่อนไปทางซ้าย */
+  }
+  
+  .bar1 {
+    top: 20%; /* แถวบนใกล้กลางจอ */
+    animation-direction: alternate-reverse;
+  }
+  
+  .bar2 {
+    top: 50%; /* แถวล่างใต้แถวบน */
+    animation-direction: alternate-reverse;
+  }
+  
+  @keyframes move-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes move-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    z-index: 800;
+  }
+
+  .ImgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+  .ImgSilde, .Img60, .ImgP{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+  }
+  
+  .iconContainer {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.5rem;
+    color: black;
+
+  }
+  
+  .Img60 {
+    top: 670px; /* ระยะห่างจาก ImgSilde */
+    z-index: 15;
+    width: 900px;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+  }
+  
+  .ImgP {
+    top: 800px; /* ปรับระยะห่าง */
+    z-index: 2;
+    width: 1400px;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+  }
+
+  .Desktop{
+    display: block;
+  }
+
+  .Mobile{
+    display: none;
+  }
+
+  @media (max-width: 1400px) {
+    .Img60 {
+      width: 50vh;
+      top: 50vh;
+    }
+  
+    .ImgP {
+      width: 70vh;
+      top: 57vh;
+    }
+  
+    .iconContainer {
+      top: 30vh;
+    }
+
+  }
+
+  /* Mobile styles */
+@media (max-width: 800px) {  
+
+  .Desktop{
+    display: none !important;
+  }
+
+  .Mobile{
+    display: block;
+  }
+
+  .Mobile .Img60 {
+    width: 50vh;
+    top: 50vh;
+    left: -3vh;
+    transform: rotate(90deg) !important;
+    z-index: 0;
+  }
+
+  .Mobile .ImgP {
+    width: 70vh;
+    top: 50vh;
+    left: -20vh;
+    transform: rotate(90deg) !important;
+
+  }
+
+  .Mobile .iconContainer {
+    margin-top: 2rem;
+    font-size: 2rem;
+    left: 55vh;
+    top: 80vh;
+  }
+}

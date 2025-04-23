@@ -1,0 +1,78 @@
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .textContainer {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    position: relative;
+    height: 100vh; /* Ensure it takes up full height */
+  }
+
+  .theory {
+    position: absolute; /* Change from absolute */
+    top: 29vh;
+  }
+  
+  .p {
+    position: absolute; /* Change from absolute */
+    bottom: 19vh;
+  }
+
+  .sp {
+    display: none;
+  }
+
+  @media (max-width: 1400px) {
+    .theory {
+      width: 30vh;
+      top: 25vh;
+    }
+
+    .p {
+      display: none;
+    }
+
+    .sp {
+      width: 35vh;
+      display: block;
+      position: absolute; 
+      top: 55vh;
+    }
+    
+  }
+
+  @media (max-width: 800px) {
+    .Img60 {
+      width: 45vh;
+      display: block;
+      position: absolute; 
+      top: 40vh;
+      z-index: 10;
+      filter: invert(1);
+    }
+
+    .sp {
+      width: 35vh;
+      display: block;
+      position: absolute; 
+      top: 55vh;
+    }
+
+    .p {
+      display: none;
+    }
+
+    .theory{
+      width: 30vh;
+      top: 25vh;
+      position: absolute;
+    }
+  }

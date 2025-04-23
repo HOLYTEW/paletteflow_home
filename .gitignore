@@ -1,0 +1,13 @@
+node_modules/
+build/
+dist/
+.next/
+out/
+
+echo "node_modules/" >> .gitignore
+echo ".next/" >> .gitignore
+echo "out/" >> .gitignorenode_modules/
+.next/
+out/
+build/
+dist/
