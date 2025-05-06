@@ -63,7 +63,73 @@ export default function First({ scrollY, fadeStart, fadeOutStart }) {
                     />
                 </div>
 
+                <div className={styles.Tablet}>
+                <motion.img
+                    className={styles.Img60}
+                    src="/60_30_10.png"
+                    animate={{
+                        opacity: fadeOut ? 0 : 1,
+                        y: fadeOut ? -50 : 0,
+                    }}
+                    transition={{ duration: 0.5 }}
+                />
+
+                <motion.img
+                    className={styles.ImgP}
+                    src="/PaletteFlow.png"
+                    animate={{
+                        opacity: fadeOut ? 0 : 1,
+                        y: fadeOut ? -50 : 0
+                    }}
+                    transition={{ duration: 0.2 }}
+                />
+                    <div className={styles.iconContainer}>
+                        {[...Array(3)].map((_, i) => (
+                            <motion.div
+                                key={i}
+                                animate={{ y: [0, 10, 0] }}
+                                transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+                            >
+                                <FontAwesomeIcon icon={faChevronDown} />
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+
                 <div className={styles.Mobile}>
+                <motion.img
+                    className={styles.Img60}
+                    src="/60_30_10.png"
+                    animate={{
+                        opacity: fadeOut ? 0 : 1,
+                        y: fadeOut ? -50 : 0,
+                    }}
+                    transition={{ duration: 0.5 }}
+                />
+
+                <motion.img
+                    className={styles.ImgP}
+                    src="/PaletteFlow.png"
+                    animate={{
+                        opacity: fadeOut ? 0 : 1,
+                        y: fadeOut ? -50 : 0
+                    }}
+                    transition={{ duration: 0.2 }}
+                />
+                    <div className={styles.iconContainer}>
+                        {[...Array(3)].map((_, i) => (
+                            <motion.div
+                                key={i}
+                                animate={{ y: [0, 10, 0] }}
+                                transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+                            >
+                                <FontAwesomeIcon icon={faChevronDown} />
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className={styles.xs}>
                 <motion.img
                     className={styles.Img60}
                     src="/60_30_10.png"
