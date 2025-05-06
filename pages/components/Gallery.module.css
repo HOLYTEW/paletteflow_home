@@ -33,6 +33,10 @@
   display: none !important;
 }
 
+.xs {
+  display: none !important;
+}
+
 @media (max-width: 1900px) {
   .SmallDesktop {
     display: block !important;  /* !!!!!!!!!! */
@@ -48,6 +52,10 @@
 
   .tablet {
     display: none !important;
+  }
+
+  .xs {
+    display: none !important;  
   }
 }
 
@@ -67,6 +75,10 @@
   .SmallDesktop {
     display: none !important;
   }
+
+  .xs {
+    display: none !important;  
+  }
 }
 
 @media (max-width: 800px) {
@@ -84,5 +96,31 @@
 
   .tablet {
     display: none !important;
+  }
+
+  .xs {
+    display: none !important;  
+  }
+}
+
+@media (max-width: 500px) {
+  .desktop {
+    display: none !important;
+  }
+
+  .SmallDesktop {
+    display: none !important;
+  }
+
+  .mobile {
+    display: none !important;  /* !!!!!!!!!! */
+  }
+
+  .tablet {
+    display: none !important;
+  }
+
+  .xs {
+    display: block !important;  /* !!!!!!!!!! */
   }
 }

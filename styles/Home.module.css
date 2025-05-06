@@ -1,7 +1,11 @@
-body {
-  margin: 0;
-  font-family: 'Prompt', sans-serif;
-  overflow-x: hidden;
+
+.screen{
+  height: 450vh;
+  overflow: hidden;
 }
 
-
+@media (max-width: 400px) {
+  .screen{
+    height: 550vh;
+  }
+}

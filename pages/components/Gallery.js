@@ -19,7 +19,7 @@ export default function Gallery({ fadeEnd }) {
 
 
 
-  const rawOpacity1 = useTransform(scrollY, [900, 925, 950], [0, 1, 0]);
+  const rawOpacity1 = useTransform(scrollY, [850, 925, 1000], [0, 1, 0]);
 
   const showLight1 = useSpring(rawOpacity1, {
     stiffness: 60,   // นุ่ม ๆ
@@ -27,7 +27,7 @@ export default function Gallery({ fadeEnd }) {
     mass: 1.2        // เคลื่อนไหวลื่น ๆ
   });
 
-  const rawOpacity2 = useTransform(scrollY, [1475, 1500, 1525], [0, 1, 0]);
+  const rawOpacity2 = useTransform(scrollY, [1425, 1500, 1575], [0, 1, 0]);
 
   const showLight2 = useSpring(rawOpacity2, {
     stiffness: 60,   // นุ่ม ๆ
@@ -35,7 +35,7 @@ export default function Gallery({ fadeEnd }) {
     mass: 1.2        // เคลื่อนไหวลื่น ๆ
   });
 
-  const rawOpacity3 = useTransform(scrollY, [2100, 2125, 2150], [0, 1, 0]);
+  const rawOpacity3 = useTransform(scrollY, [2000, 2125, 2200], [0, 1, 0]);
 
   const showLight3 = useSpring(rawOpacity3, {
     stiffness: 10,   // นุ่ม ๆ
@@ -49,7 +49,7 @@ export default function Gallery({ fadeEnd }) {
 
   const Pic60 = useTransform(scrollY, 
     [fadeEnd, fadeEnd + 300, fadeEnd + 600], // 3 ระยะ
-    ["1500vh", "180vh", "1500vh"] // เริ่มจากล่าง -> อยู่ตรงกลาง -> กลับไปล่าง
+    ["1500vh", "100vh", "1500vh"] // เริ่มจากล่าง -> อยู่ตรงกลาง -> กลับไปล่าง
   );
 
   const Pic60Move = useSpring(Pic60, {
@@ -60,7 +60,7 @@ export default function Gallery({ fadeEnd }) {
 
   const P60 = useTransform(scrollY, 
     [fadeEnd, fadeEnd + 300, fadeEnd + 600], // 3 ระยะ
-    ["1000vh", "-550vh", "1000vh"] // วิ่งเข้ามา -> อยู่ตรงกลาง -> วิ่งออกไป
+    ["1000vh", "-500vh", "1000vh"] // วิ่งเข้ามา -> อยู่ตรงกลาง -> วิ่งออกไป
   );
 
   const P60Move = useSpring(P60, {
@@ -74,7 +74,7 @@ export default function Gallery({ fadeEnd }) {
     // pic30 เลื่อนขึ้นมาจากล่างแล้วกลับไปล่าง
     const Pic30 = useTransform(scrollY, 
       [fadeEnd + 600, fadeEnd + 900, fadeEnd + 1200], // เพิ่ม range ให้ scroll ได้มากขึ้น
-      ["1500vh", "250vh", "1500vh"]
+      ["1500vh", "190vh", "1500vh"]
     );
   
     const Pic30Move = useSpring(Pic30, {
@@ -86,7 +86,7 @@ export default function Gallery({ fadeEnd }) {
     // p30 เลื่อนมาจากซ้ายแล้วกลับไปซ้าย
     const P30 = useTransform(scrollY, 
       [fadeEnd + 600, fadeEnd + 900, fadeEnd + 1200], // เพิ่ม range ให้ scroll ได้มากขึ้น
-      ["-1500vh", "370vh", "-1500vh"]
+      ["-1500vh", "330vh", "-1500vh"]
     );
   
     const P30Move = useSpring(P30, {
@@ -100,7 +100,7 @@ export default function Gallery({ fadeEnd }) {
 
     const Pic10 = useTransform(scrollY, 
       [fadeEnd + 1200, fadeEnd + 1500, fadeEnd + 1800], // ลดช่วงให้มาเร็วขึ้น
-      ["1500vh", "200vh", "1500vh"]
+      ["1500vh", "150vh", "1500vh"]
     );
   
     const Pic10Move = useSpring(Pic10, {
@@ -388,7 +388,7 @@ export default function Gallery({ fadeEnd }) {
       <div className={styles.desktop}>
         <motion.div
           style={{
-            left: "27vh",
+            left: "25vh",
             top: "0",
             position: "absolute",
             zIndex: "100",
@@ -401,30 +401,30 @@ export default function Gallery({ fadeEnd }) {
           style={{
             position: "absolute",
             transform: "translate(-50%, -50%)",
-            left: "40vh",
+            left: "43vh",
             top: "0",
             y : Pic60Move, // ควบคุมตำแหน่งตาม scroll
           }}
         >
-          <img src="/pic60.png" width={530} />
+          <img src="/pic60.png" width={480} />
         </motion.div>
         <motion.div
           style={{
             position: "absolute",
             transform: "translate(-50%, -50%)",
             right: "0",
-            top: "25vh",
+            top: "23vh",
             x : P60Move, // ควบคุมตำแหน่งตาม scroll
           }}
         >
-          <img src="/p60.png" width={530} />
+          <img src="/p60.png" width={480} />
         </motion.div>
         
 
 
         <motion.div
           style={{
-            right: "28vh",
+            right: "24vh",
             top: "0",
             position: "absolute",
             zIndex: "100",
@@ -442,7 +442,7 @@ export default function Gallery({ fadeEnd }) {
             y: Pic30Move, // ควบคุมให้เลื่อนขึ้น-ลง
             }}
         >
-            <img src="/pic30.png" width={500} />
+            <img src="/pic30.png" width={480} />
         </motion.div>
         <motion.div
           style={{
@@ -453,14 +453,14 @@ export default function Gallery({ fadeEnd }) {
             x: P30Move, // ควบคุมให้เลื่อนซ้าย-ขวา
           }}
         >
-          <img src="/p30.png" width={550} />
+          <img src="/p30.png" width={500} />
         </motion.div>
 
 
 
         <motion.div
           style={{
-            left: "25vh",
+            left: "22vh",
             top: "0",
             position: "absolute",
             zIndex: "100",
@@ -485,11 +485,11 @@ export default function Gallery({ fadeEnd }) {
             position: "absolute",
             transform: "translate(-50%, -50%)",
             right: 0,
-            top: "25vh",
+            top: "30vh",
             x : P10Move,
             }}
         >
-            <img src="/p10.png" width={600} />
+            <img src="/p10.png" width={500} />
         </motion.div>
       </div>
 
@@ -794,6 +794,92 @@ export default function Gallery({ fadeEnd }) {
             }}
         >
             <img src="/10M.png" width={420} />
+        </motion.div>
+      </div>
+
+
+      <div className={styles.xs}>
+        <motion.div
+            style={{
+              position: "absolute",
+              zIndex: "100",
+              left: "2vh",
+              top: "-10vh",
+            }}
+          >
+          <img src="/light.png" width={390} />
+        </motion.div>
+        <motion.div
+          style={{
+            position: "absolute",
+            transform: "translate(-50%, -50%)",
+            left: "10vh",
+            top: "-15vh",
+            y : Pic60MoveM, 
+          }}
+        >
+          <img src="/pic60.png" width={260} />
+        </motion.div>
+        <motion.div
+          style={{
+            position: "absolute",
+            transform: "translate(-50%, -50%)",
+            left: "70vh",
+            top: "50vh",
+            x : P60MoveM, 
+          }}
+        >
+          <img src="/60M.png" width={260} />
+        </motion.div>
+
+
+
+        <motion.div
+            style={{
+            position: "absolute",
+            transform: "translate(-50%, -50%)",
+            left: "11vh",
+            top: "-15vh",
+            y: Pic30MoveM, // ควบคุมให้เลื่อนขึ้น-ลง
+            }}
+        >
+            <img src="/pic30.png" width={240} />
+        </motion.div>
+        <motion.div
+          style={{
+            position: "absolute",
+            transform: "translate(-50%, -50%)",
+            left: "-37vh",
+            top: "52vh",
+            x: P30MoveM, // ควบคุมให้เลื่อนซ้าย-ขวา
+          }}
+        >
+          <img src="/30M.png" width={250} />
+        </motion.div>
+
+
+      <motion.div
+            style={{
+            position: "absolute",
+            transform: "translate(-50%, -50%)",
+            left: "8vh",
+            top: "15vh",
+            y : Pic10MoveM,
+            }}
+        >
+            <img  src="/pic10.png" width={290} />
+        </motion.div>
+
+        <motion.div
+            style={{
+            position: "absolute",
+            transform: "translate(-50%, -50%)",
+            left: "60vh",
+            top: "50vh",
+            x : P10MoveM,
+            }}
+        >
+            <img src="/10M.png" width={260} />
         </motion.div>
       </div>
 

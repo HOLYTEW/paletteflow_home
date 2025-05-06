@@ -35,7 +35,7 @@ export default function Video ({ scrollY, fadeStart }) {
                 </iframe>
             </div>
 
-            <img className={styles.hVideo} src="/hVideo.png" width={950}/>
+            <img className={styles.hVideo} src="/hVideo.png" width={800}/>
 
 
             <div className={styles.btnTool}>
@@ -51,17 +51,17 @@ export default function Video ({ scrollY, fadeStart }) {
                         ))}
                 </motion.div>
                 <a href="https://paletteflowtoolabout.vercel.app/tool" target="_blank" rel="noopener noreferrer">
-                    <img className={styles.btn} src="/btn.png" width={590} alt="Button" />
+                    <img className={styles.btn} src="/btn.png" width={450} alt="Button" />
                 </a>    
             </div>
 
 
             <a href="https://youtu.be/G6HuSLwJc74?si=MqlE3fLZiHN7FgcM" target="_blank" className={styles.ytlink} rel="noopener noreferrer">
-                <img className={styles.yt_icon} src="/yt_icon.png" width={80} alt="Button" />
-                <img className={styles.circle} src="/circle.png" width={230} alt="Button" />
+                <img className={styles.yt_icon} src="/yt_icon.png" width={65} alt="Button" />
+                <img className={styles.circle} src="/circle.png" width={190} alt="Button" />
             </a>    
 
-            <img className={styles.easy} src="/easy.png" width={810}/>
+            <img className={styles.easy} src="/easy.png" width={710}/>
 
             <img className={styles.easyS} src="/easyS.png" />
             

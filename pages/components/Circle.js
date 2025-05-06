@@ -35,8 +35,8 @@ export default function Circle({ scrollY, fadeStart }) {
           className={styles.textContainer} 
           style={{ opacity: textOpacity, transition: 'opacity 0 s ease-in-out' }}
         >
-        <img className={styles.theory} src="/theory.png" width={410} />
-        <img className={styles.p} src="/p.png" width={1300} />
+        <img className={styles.theory} src="/theory.png" width={400} />
+        <img className={styles.p} src="/p.png" width={1200} />
         <img className={styles.Img60} src="/60_30_10.png" width={500} />
         <img className={styles.sp} src="/sp.png" width={500} />
         </motion.div>
